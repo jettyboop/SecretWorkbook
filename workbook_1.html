@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 1</title>
+
+<style>
+   
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+   body{
+    background-color: black;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Inter Tight'
+}
+
+p {
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+
+
+        .peep {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .peep img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .peep:hover {
+          transform: scale(1.1);
+        }
+
+        .peep:hover img {
+          transform: scale(1.1);
+        }
+
+        #content-wrapper {
+          padding: 10px;
+          width: 100%;
+        }
+        #content-wrapper > * {
+          min-height: 100vh;
+        }
+        
+        #prev-tab {
+position: fixed;
+top: 5px;
+left: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(0, 0, 0);
+}
+
+#home-tab {
+position: fixed;
+top: 5px;
+left: 45%;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(0, 0, 0);
+}
+#next-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(0, 0, 0);
+}
+    </style>
+</head>
+<body>
+
+
+<div id="home-tab">
+  <a href="home.html">
+     <h>go home</h>
+   </a>
+</div>
+
+<div id="next-tab">
+  <a href="workbook_2.html">
+    <h>week 2 &gt;</h>
+  </a>
+</div>
+
+  <div class="content-wrapper">
+    <div class="peep" style="top: 30%; left: 10%;">
+      <a href="wb1_class.html">
+        <img src="./img/class.png" alt="Classwork">
+      </a>
+    </div>
+   
+      <div class="peep" style="top: 30%; left: 60%;">
+        <a href="wb1_home.html">
+          <img src="./img/home.png" alt="Homework">
+        </a>
+      </div>
+  </div>
+</div>
+    
+</body>
+</html>

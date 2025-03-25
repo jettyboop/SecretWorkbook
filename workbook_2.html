@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 2</title>
+
+<style>
+
+* {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+   body{
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Inter Tight'
+}
+p {
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+.eye,
+.brain,
+.hand,
+.square {
+    position: absolute;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    }
+        
+        .home {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .home img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .home:hover {
+          transform: scale(1.1);
+        }
+
+        .home:hover img {
+          transform: scale(1.1);
+        }
+    
+         .meme1 {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .meme1 img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .meme2 {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .meme2 img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+
+        .meme3 {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .meme3 img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+
+        .meme4 {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .meme4 img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+
+        #bg-grad {
+            background-image: linear-gradient(115deg, #ff009d, #bbf6d8, #fff25f);
+            width: 2000px;
+            height: 2000px;
+            background-size: 400% 400%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            animation: 10s gradMove alternate-reverse infinite;
+        }
+
+        @keyframes gradMove {
+        0% { background-position: 0% 50%;}
+        50% { background-position: 100% 50%;}
+        100% { background-position: 0% 50%;}
+        }
+  
+@keyframes float-random {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-100%, 100%); }
+  50% { transform: translate(100%, -100%); }
+  75% { transform: translate(-100%, -100%); }
+  100% { transform: translate(0, 0); }
+}
+
+        .meme1 {
+            animation: float-random 10s ease-in-out infinite;
+        }
+        .meme2 {
+            animation: float-random 9.5s ease-in-out infinite;
+        }
+        .meme3 {
+            animation: float-random 9s ease-in-out infinite;
+        }
+        .meme4 {
+            animation: float-random 8.5s ease-in-out infinite;
+        }
+
+        #content-wrapper {
+            padding: 10px;
+            width: 100%;
+        }
+        #content-wrapper > * {
+            min-height: 100vh;
+        }
+
+        #prev-tab {
+position: fixed;
+top: 5px;
+left: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+}
+
+#home-tab {
+position: fixed;
+top: 5px;
+left: 45%;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+}
+#next-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+}
+    </style>
+</head>
+<body>
+    <div id="prev-tab">
+        <a href="workbook_1.html">
+          <h>&lt; week 1</h>
+        </a>
+      </div>
+    <div id="home-tab">
+        <a href="home.html">
+           <h>go home</h>
+         </a>
+      </div>
+      
+      <div id="next-tab">
+        <a href="workbook_3.html">
+          <h>week 3 &gt;</h>
+        </a>
+      </div>
+
+<div id="bg-grad"></div>
+  <div class="content-wrapper">
+    <div class="meme1" style="top: 10%; left: 10%;">
+        <img src="./img/meme1.jpeg" alt="Classwork">
+    </div>
+   
+      <div class="meme2" style="top: 80%; left: 50%;">
+          <img src="./img/meme2.jpeg" alt="Homework">
+      </div>
+
+      <div class="meme3" style="top: 90%; left: 20%;">
+        <img src="./img/meme3.jpeg" alt="Homework">
+      </div>
+
+      <div class="meme4" style="top: 40%; left: 50%;">
+          <img src="./img/meme4.jpeg" alt="Homework">
+      </div>
+
+        <div class="meme1" style="top: 60%; left: 90%;">
+        <img src="./img/meme5.jpeg" alt="Classwork">
+     </div>
+   
+      <div class="meme2" style="top: 20%; left: 70%;">
+          <img src="./img/meme6.jpeg" alt="Homework">
+      </div>
+
+      <div class="home" style="top: 30%; left: 60%;">
+        <a href="wb2_home.html">
+          <img src="./img/donttouch.jpeg" alt="Homework">
+        </a>
+      </div>
+
+      <div class="home" style="top: 30%; left: 20%;">
+        <a href="wb2_class.html">
+          <img src="./img/myoffice.jpeg" alt="Homework">
+        </a>
+      </div>
+  </div>
+</div>
+    
+</body>
+</html>

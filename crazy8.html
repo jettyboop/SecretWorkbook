@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Crazy Eights</title>
+
+<style>
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+body {
+background-color:rgb(23, 25, 129);
+height: 100vh;
+width: 100vw;
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+
+}
+
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+color: rgb(255, 242, 0);
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+color: rgb(255, 242, 0);
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+color: rgb(255, 242, 0);
+}
+.square {
+            width: 400px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .square img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .square:hover {
+          transform: scale(1.1);
+        }
+
+        .square:hover img {
+          transform: scale(1.1);
+        }
+
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color:  rgb(238, 0, 0);
+/* height: 100%; */
+}
+
+
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(23, 25, 129);
+}
+
+#content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+
+	
+/* Shooting Stars */
+
+.shooting-stars {
+
+position: absolute;
+
+z-index: -10;
+
+}
+
+.stars1 {
+
+color: rgb(255, 242, 0);
+
+text-shadow:rgb(23, 25, 129);
+
+font-size: 2.4em;
+
+letter-spacing: -2px;
+
+text-shadow: 2px 2px 20px rgb(23, 25, 129);
+opacity: 0.9;
+
+}
+
+#star1 {
+
+position: absolute;
+
+top: 0px;
+right: 10vw;
+animation: 3.3s shootingStar linear infinite;
+
+}
+
+#star2 {
+position: absolute;
+top: 0px;
+right: 50vw;
+animation: 2.7s shootingStar linear infinite;
+}
+
+#star3 {
+position: absolute;
+top: -15vh;
+right: 60vw;
+animation: 4.2s shootingStar linear infinite;
+animation-delay: 1.2s;
+}
+
+#star4 {
+position: absolute;
+top: -30vh;
+right: 90vw;
+animation: 4.3s shootingStar linear infinite;
+animation-delay: 2s;
+}
+
+#star5 {
+position: absolute;
+top: -40vh;
+right: 30vw;
+animation: 3s shootingStar linear infinite;
+}
+
+#star6 {
+position: absolute;
+top: -3vh;
+right: -50vw;
+animation: 3s shootingStar linear infinite;
+animation-delay: 1.2s;
+}
+
+#star7 {
+position: absolute;
+top: -22px;
+right: -20vw;
+animation: 2s shootingStar linear infinite;
+animation-delay: 2.2s;
+}
+
+@keyframes stars-fall {
+0% {
+line-height: 5px;
+}
+100% {
+line-height: 10px;
+}
+}
+@keyframes shootingStar {
+0% {
+transform: rotateZ(-40deg) translateX(0%) translateY(0%);
+}
+100% {
+transform: rotateZ(-70deg) translateX(-150vw) translateY(50vh);
+}
+}
+
+    </style>
+</head>
+<body>
+
+<div id="nav-tab">
+    <a href="wb2_class.html">
+       <h> &lt; back</h>
+     </a>
+</div>
+
+<div class="content-wrapper">
+<br>
+<h>1. CRAZY EIGHTS</h>
+<br>
+<div class="square draggable" style="top:185px; left: 490px;">
+    <img src="./img/crazy8.JPG" alt="Crazy Eights" width="400" height="auto">
+</div>
+</div>
+
+    <p>1 minute = 1 idea, and we were given 8 minutes</p>
+    <p>This rapid fire brainstorming game encouraged us to think as freely and as creaitve as possible, pushing us to come up with bold and unconventional ideas </p>
+    <p></p>
+
+    <div id="shooting-stars" class="hidden">
+        <div class="stars1" id="star1"><pre>*-.</pre></div>
+        <div class="stars1" id="star2"><pre>*-.</pre></div>
+        <div class="stars1" id="star3"><pre>*-.</pre></div>
+        <div class="stars1" id="star4"><pre>*-.</pre></div>
+        <div class="stars1" id="star5"><pre>*-.</pre></div>
+        <div class="stars1" id="star6"><pre>*-.</pre></div>
+        <div class="stars1" id="star7"><pre>*-.</pre></div>
+        </div>
+
+    <!-- from Matilda's Workbook-->
+     
+    <script>
+
+        function dragElement(elmnt) {
+            var pos1 = 0, 
+            pos2 = 0, 
+            pos3 = 0, 
+            pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+      
+      var draggableElements = document.getElementsByClassName("draggable");
+        for (var i = 0; i < draggableElements.length; i++) {
+            dragElement(draggableElements[i]);
+        }
+        
+        
+    </script>
+
+</body>
+</html>

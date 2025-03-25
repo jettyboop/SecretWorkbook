@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--This code snippet was used to construct the moving cursor ont his webpage: -->
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+<title>Light Beam</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+height: 100vh;
+width: 100vw;
+/* set baseline grid */
+font-size: 12px;
+line-height: 18px;
+font-family: 'roboto'
+}
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+}
+h1 {
+font-size: 2rem;
+line-height: 2.4rem;
+}
+header {
+height: 15vh;
+background-color: #FF0000;
+color: rgb(255, 255, 255);
+}
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color:  rgb(255, 103, 192);;
+/* height: 100%; */
+}
+#nav-tab {
+position: fixed;
+top: 15px;
+right: 15px;
+width: 30vw;
+background-color: rgb(204, 255, 0);
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
+#content-wrapper {
+padding: 10px;
+width: 100%;
+}
+#content-wrapper > * {
+min-height: 100vh;
+}
+img {
+width: 50px;
+}
+@media screen and (max-width: 768px) {
+.wrapper {
+flex-direction: column;
+}
+#nav-tab {
+width: 100%;
+height: 80px;
+flex-direction: row;
+}
+}
+</style>
+</head>
+<body>
+<header><h1>Interactive Media</h1></header>
+<div class="wrapper">
+<div id="nav-tab">
+<a href="">Week 1</a>
+<a href="#week-two">Week 2</a>
+<a>Week 3</a>
+</div>
+<div id="content-wrapper">
+<div id="week-one">
+<h1>Light Beams</h1>
+<p>A light beam or beam of light is a directional projection of light energy radiating from a light source. Sunlight forms a light beam (a sunbeam) when filtered through media such as clouds, <img src="./img/fish 1.png">foliage, or windows. To artificially produce a light beam, a lamp and a parabolic reflector is used in many lighting devices such as spotlights, car headlights, PAR Cans, and LED housings. Light from certain types of laser has the smallest possible beam divergence.</p>
+</div>
+<div id="week-two">
+<h1>Light Beams</h1>
+<p>A light beam or beam of light is a directional projection of light energy radiating from a light source. Sunlight forms a light beam (a sunbeam) when filtered through media such as clouds, <img src="./img/fish 2.png">foliage, or windows. To artificially produce a light beam, a lamp and a parabolic reflector is used in many lighting devices such as spotlights, car headlights, PAR Cans, and LED housings. Light from certain types of laser has the smallest possible beam divergence.</p>
+</div>
+<div id="week-three">
+<h1>Light Beams</h1>
+<p>A light beam or beam of light is a directional projection of light energy radiating from a light source. Sunlight forms a light beam (a sunbeam) when filtered through media such as clouds, <img src="./img/fish 3.png">foliage, or windows. To artificially produce a light beam, a lamp and a parabolic reflector is used in many lighting devices such as spotlights, car headlights, PAR Cans, and LED housings. Light from certain types of laser has the smallest possible beam divergence.</p>
+</div>
+</div>
+</div>
+</body>
+</html>

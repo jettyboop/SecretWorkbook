@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 1 Class Activities</title>
+
+<style>
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+body {
+height: 100vh;
+width: 100vw;
+/* set baseline grid */
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+}
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.header {
+height: 15vh;
+background-color: #FF0000;
+color: rgb(255, 255, 255);
+}
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+/* height: 100%; */
+}
+
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+}
+
+#content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+
+    </style>
+</head>
+<body>
+
+<div id="nav-tab">
+    <a href="workbook_1.html">
+       <h> &lt; back</h>
+     </a>
+</div>
+ 
+    <p1>WEEK1</p1><h>(workshop)</h>
+    <br>
+<div class="content-wrapper">
+    <br>
+    <i><p>"Interactive media is related to the concepts interaction design, new media,
+        interactivity, human computer interaction, cyberculture, digital culture,
+        interactive design, and can include augmented reality and virtual reality." </p>
+    <p>(week 1 slides, 2025)</p></i>
+    <br>
+<br>
+
+<div class="middle"><h>ACTIVITES:</h></div>
+    <br>
+<br>
+    <h>1. Gesture Glossary</h>
+    <div class="wrapper">
+    <p1>In this activity, me, Vania, Tashya, and Sienna brainstormed and listed gestures and movements that act as a trigger of human-nonhuman interactivity.</p1>
+    <img src="./img/HT_daily.JPG" alt="Gesture Glossary" width="400" height="auto">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="right"><h>2. Speculative Human-Computer Interaction (HCI) </h></div>
+    <div class="wrapper">
+    <img src="./img/HT_invent.JPG" alt="HCI inventions" width="400" height="auto">
+    <P1>We imagined a few amazing inventions of human-computer interactions that have not exist.</P>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h>3. HTML Race</h>
+    <div class="wrapper">
+        <p1>We were asked to draw a website we like from memory, and race to build the HTML the fastest out of all the groups in the class. We won! (or at least i think).</p1>
+    <img src="./img/websitememory.JPG" alt="website from memory" width="400" height="auto">
+    <img src="./img/HTMLRACE.JPG" alt="HTML race" width="400" height="auto">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="right"><h>4. Hello World! </h></div>
+    <div class="wrapper">
+    <img src="./img/helloworld.png" alt="HCI inventions" width="400" height="auto">
+    <P1>I created my first "hello World!" in my browser.</P1>
+    </div>
+    <br>
+</div>
+</div>
+ 
+ 
+     
+    <script>
+
+        function dragElement(elmnt) {
+            var pos1 = 0, 
+            pos2 = 0, 
+            pos3 = 0, 
+            pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+      
+      var draggableElements = document.getElementsByClassName("draggable");
+        for (var i = 0; i < draggableElements.length; i++) {
+            dragElement(draggableElements[i]);
+        }
+        
+      
+    </script>
+</body>
+</html>

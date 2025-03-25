@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 2 Class Activities</title>
+
+<style>
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+body {
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 200vw;
+margin: 0;
+padding: 0;
+font-size: 12px;
+line-height: 18px;
+color: black;
+overflow-y: hidden;
+overflow-x: scroll;
+font-family: 'Inter Tight'
+}
+
+
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+.peep {
+            display: flex;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .peep img {
+
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .peep:hover {
+          transform: scale(0.9);
+        }
+
+        .peep:hover img {
+          transform: scale(0.9);
+        }
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.header {
+height: 15vh;
+background-color: #FF0000;
+color: rgb(255, 255, 255);
+}
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+/* height: 100%; */
+}
+
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+}
+
+#content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+
+    </style>
+</head>
+<body>
+
+<div id="nav-tab">
+    <a href="workbook_2.html">
+       <h> &lt; back</h>
+     </a>
+</div>
+ 
+    <p1>WEEK2</p1><h>(workshop)</h>
+
+<div class="content-wrapper">
+
+    <i><p>"Interactive media is related to the concepts interaction design, new media,
+        interactivity, human computer interaction, cyberculture, digital culture,
+        interactive design, and can include augmented reality and virtual reality." (week 1 slides, 2025)</p></i>
+<br>
+<h>ACTIVITES:</h>
+<br>
+<div class="wrapper">
+   <figure>
+    <div class="peep">
+    <a href="crazy8.html">
+    <img src="./img/crazy8cover.jpeg" alt="Gesture Glossary" width="400" height="auto">
+    </a>
+    </div>
+    <figcaption><h>1. Crazy 8s</h></figcaption>
+   </figure>
+
+   <figure>
+    <div class="peep">
+    <a href="wireframeprotoype.html">
+    <img src="./img/crazywireframecover.jpeg" alt="Gesture Glossary" width="400" height="auto">
+    </a>
+    </div>
+    <figcaption><h>2. Wireframe Prototype</h></figcaption>
+   </figure>
+
+   <figure>
+    <div class="peep">
+    <a href="cssbasics.html">
+    <img src="./img/cssbasicscover.jpeg" alt="Gesture Glossary" width="400" height="auto">
+    </a>
+    </div>
+    <figcaption><h>3. CSS basics</h></figcaption>
+   </figure>
+
+</div>
+</div>
+</div>
+</body>
+</html>

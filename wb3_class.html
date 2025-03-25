@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 3</title>
+
+<style>
+   * {
+margin: 0;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body {
+background-color: crimson;
+height: 100vh;
+width: 100vw;
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+}
+
+p {
+font-size: 2rem;
+line-height:2.1rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 1.5rem;
+line-height: 2rem;
+}
+t {
+font-size: 2rem;
+line-height: 2rem;
+}
+
+j {
+font-size: 1rem;
+line-height: 1rem;
+}
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.eye,
+.brain,
+.hand,
+.square {
+    position: absolute;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    }
+
+        .eye {
+            width: 600px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .eye img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .eye:hover {
+          transform: scale(1.1);
+        }
+
+        .eye:hover img {
+          transform: scale(1.0);
+        }
+        .brain {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .brain img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .brain:hover {
+          transform: scale(1.1);
+        }
+
+        .brain:hover img {
+          transform: scale(1.1);
+        }
+
+        .hand {
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .hand img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .hand:hover {
+          transform: scale(1.1);
+        }
+
+        .hand:hover img {
+          transform: scale(1.1);
+        }
+
+        .square {
+            width: 500px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .square img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .square:hover {
+          transform: scale(1.1);
+        }
+
+        .square:hover img {
+          transform: scale(1.1);
+        }
+
+
+
+        #prev-tab {
+position: fixed;
+top: 5px;
+left: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+}
+
+#home-tab {
+position: fixed;
+top: 5px;
+left: 45%;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+}
+#next-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+}
+
+        #content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+
+#popUp {
+width: 30vw;
+height: 200px;
+font-size: 3em;
+color: crimson;
+overflow-y: scroll;
+background-color: white;
+position: absolute;
+z-index: 10;
+top: 30%;
+left: 35vw;
+border: 1px solid rgb(255, 0, 0);
+}
+
+#popUp2 {
+width: 30vw;
+height: 200px;
+font-size: 3em;
+color: rgb(138, 111, 209);
+overflow-y: scroll;
+background-color: white;
+position: absolute;
+z-index: 10;
+top: 30%;
+left: 35vw;
+border: 1px solid rgb(138, 111, 209);
+}
+    </style>
+</head>
+<body>
+
+<div id="next-tab">
+  <a href="workbook_3.html">
+    <h>&lt; back</h>
+  </a>
+</div>
+<p1>WEEK3</p1><t>(workshop)</t>
+
+<div class="wrapper">
+<div class="square draggable" style="top: 10%; left: 5%;">
+    <img src="./img/fluid_design.JPG" alt="fluid design web">
+</div>
+<div class="square draggable" style="top: 50%; left: 65%;">
+    <img src="./img/mobilewebsite.JPG" alt="fluid design mobile">
+</div>
+
+<figure>
+<div class="eye draggable" style="top: 35%; left: 5%;">
+    <a href="week_3_class.html">
+    <img src="./img/cherry.png" alt="step by step tutorial">
+</a>
+<figcaption> <j>Live Coding Demo<i><br> (a continuation of week 2's CSS tutorial)</i></j></figcaption>
+</div>
+</figure>
+
+
+</div>
+  <div class="draggable" id="popUp" style="top: 40%; left: 30%;">
+    <p>A fluid website designed for the desktop layout. I envisioned the images as draggable and clickable elements that would lead to other pages.</div>
+  
+    <div class="draggable" id="popUp2" style="top: 20%; left: 50%;">
+        <p>A fluid wesite design adapted for mobile. I realized that dragging and clicking might be more difficult on mobile devices, so the images will appear in random layouts as an intentional part of the design.</p></div>
+      
+</div>
+
+    <!-- from Matilda's Workbook-->
+     
+    <script>
+
+        function dragElement(elmnt) {
+            var pos1 = 0, 
+            pos2 = 0, 
+            pos3 = 0, 
+            pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+      
+      var draggableElements = document.getElementsByClassName("draggable");
+        for (var i = 0; i < draggableElements.length; i++) {
+            dragElement(draggableElements[i]);
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

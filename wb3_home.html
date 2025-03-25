@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 2 Progress</title>
+
+<style>
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+body {
+height: 100vh;
+width: 100vw;
+/* set baseline grid */
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+}
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.header {
+height: 15vh;
+background-color: #FF0000;
+color: rgb(255, 255, 255);
+}
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+/* height: 100%; */
+}
+
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+}
+
+#content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+
+    </style>
+</head>
+<body>
+
+<div id="nav-tab">
+    <a href="workbook_2.html">
+       <h> &lt; back</h>
+     </a>
+</div>
+ 
+    <p1>WEEK2</p1><h>(homework)</h>
+    <br>
+<div class="content-wrapper">
+<br>
+
+<div class="middle"><h>PROGRESS</h></div>
+    <br>
+<br>
+
+
+    <p1>I realized that in order to bring my prototype to life, I needed to learn how to make images draggable. I was told that JavaScript was required in order to achieve this. I studied how Matilda made draggable things in her workbook. After some trials and errors, I finally got it working and I was able to start designing and developing the rest of my website. </p1>
+    <video style="width: 500px; height: auto;" autoplay><source src="./img/fail.MOV" type="video/mp4"></video><video style="width: 500px; height: auto;" autoplay><source src="./img/yay.MOV" type="video/mp4"></video>
+    <br>
+    <p1>I also experimented with projects on CodePen that also used JavaScript which helped me understand better the logic behind draggable elements.</p1>
+    <iframe id="experiment" src="http://127.0.0.1:5500/My_Workbook/workbook/codepenio.html" frameborder="0" width="800" height="600"></iframe>
+    <br>
+    <p1>To personalize it, I took photos of my own eyes, hands, etc, editing them in Photoshop and Illustrator before including them in my website. Along the way, I also explored and experimentd with different coding techniques and visual tricks I came across.</p1>
+    <br>
+    <img src="./img/photoshop edit.png" alt="personalize" width="600" height="auto"> 
+    <img src="./img/photoshop edit 2.png" alt="personalize" width="600" height="auto"> 
+    <br>
+    <br>
+    <div class="right"><h>INSPIRATIONS</h></div>
+    <div class="wrapper">
+     
+            <iframe id="inspirations" src="https://matildasutho.github.io/InteractiveMedia2024/Week2/MatildasWorkbook/index.html" frameborder="0" width="800" height="600"></iframe> 
+            <iframe id="inspirations" src="https://unim-ajl.github.io/Workbook/weekTwo.html" frameborder="0" width="800" height="600"></iframe>
+            <iframe id="inspirations" src="https://rozi.design/" frameborder="0" width="800" height="600"></iframe> 
+            <iframe id="inspirations" src="https://codepen.io/trending" frameborder="0" width="800" height="600"></iframe>
+            
+    </div>
+    <br>
+    </div>
+    <br>
+</div>
+</div>
+ 
+ 
+     
+    <script>
+
+        function dragElement(elmnt) {
+            var pos1 = 0, 
+            pos2 = 0, 
+            pos3 = 0, 
+            pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+      
+      var draggableElements = document.getElementsByClassName("draggable");
+        for (var i = 0; i < draggableElements.length; i++) {
+            dragElement(draggableElements[i]);
+        }
+        
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 2 Class Activities</title>
+
+<style>
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+body {
+background-color: #ffffff;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 200vw;
+margin: 0;
+padding: 0;
+font-size: 12px;
+line-height: 18px;
+color: rgb(0, 0, 0);
+overflow-y: hidden;
+overflow-x: scroll;
+font-family: 'Inter Tight'
+}
+
+
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+}
+
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+
+p2 {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+color: #FF0000;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+.square {
+            top: 100px; 
+            left: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+
+        .square:hover {
+          transform: scale(1.1);
+        }
+
+        .square:hover img {
+          transform: scale(1.1);
+        }
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.header {
+height: 15vh;
+background-color: #FF0000;
+color: rgb(255, 255, 255);
+}
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+/* height: 100%; */
+}
+
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color:  #ffffff;
+}
+
+#content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+#popUp {
+width: 30vw;
+height: 590px;
+font-size: 3em;
+overflow-y: scroll;
+background-color: white;
+position: absolute;
+z-index: 10;
+top: 30%;
+left: 35vw;
+border: 1px solid  rgb(255, 103, 192);
+}
+
+
+    </style>
+</head>
+<body>
+
+<div id="nav-tab">
+    <a href="wb2_class.html">
+       <h> &lt; back</h>
+     </a>
+</div>
+ 
+
+<div class="content-wrapper">
+<h>Matilda's CSS tutorial</h>
+<p>We were introduced to how CSS works by following along with Matilda's step by step tutorial.</p>
+
+<br>
+<div class="square draggable">
+    <iframe id="exampleWebsite" src="http://127.0.0.1:5500/My_Workbook/workbook/img/CSSBASICSweek2.html" frameborder="0" width="800" height="600"></iframe> 
+</div>
+
+<div class="draggable" id="popUp" style="top: 14.5%; left: 85%;"">
+    <p2>
+        CSS CODE:
+        <br>
+        * {
+        <br>
+        margin: 0;
+        <br>
+        padding: 0;
+        <br>
+        box-sizing: border-box;
+        <br>
+        }
+        <br>
+        body {
+            <br>
+        height: 100vh;
+        <br>
+        width: 100vw;
+        <br>
+        font-size: 12px;
+        <br>
+        line-height: 18px;
+        <br>
+        font-family: Arial, Helvetica, sans-serif;
+        <br>
+        }
+        <br>
+        p {
+            <br>
+        font-size: 1rem;
+        <br>
+        line-height: 1.2rem;
+        <br>
+        }
+        <br>
+        h1 {
+            <br>
+        font-size: 1.8rem;
+        <br>
+        line-height: 2.4rem;
+        <br>
+        }
+        <br>
+        header {
+            <br>
+        height: 15vh;
+        <br>
+        background-color: #FF0000;
+        <br>
+        color: rgb(255, 255, 255);
+        <br>
+        }
+        <br>
+        .wrapper {
+            <br>
+        display: flex;
+        <br>
+        flex-direction: row;
+        <br>
+        background-color: rgb(255, 103, 192);
+        <br>
+        height: 100%;
+        <br>
+        }
+        <br>
+        #nav-tab {
+            <br>
+        width: 30vw;
+        <br>
+        background-color: rgb(204, 255, 0);
+        <br>
+        }
+        <br>
+        #content-wrapper {
+            <br>
+        padding: 10px;
+        <br>
+        width: 100%;
+        <br>
+        }
+        <br>
+        img {
+            <br>
+        width: 50px;
+        <br>
+        }
+        </p2>
+    </div>
+
+
+</div>
+</div>
+</div>
+
+<script>
+
+    function dragElement(elmnt) {
+        var pos1 = 0, 
+        pos2 = 0, 
+        pos3 = 0, 
+        pos4 = 0;
+        elmnt.onmousedown = dragMouseDown;
+
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    }
+  
+  var draggableElements = document.getElementsByClassName("draggable");
+    for (var i = 0; i < draggableElements.length; i++) {
+        dragElement(draggableElements[i]);
+    }
+    
+    
+</script>
+</body>
+</html>

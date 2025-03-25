@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 3</title>
+
+<style>
+   * {
+margin: 0;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body {
+background-image: url(./img/underwaterbg.png);
+height: 100vh;
+width: 100vw;
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+}
+
+p {
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 3rem;
+line-height: 3rem;
+}
+h {
+font-size: 1.5rem;
+line-height: 2rem;
+}
+
+L {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.eye,
+.brain,
+.hand,
+.square {
+    position: absolute;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    }
+
+        .eye {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .eye img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .eye:hover {
+          transform: scale(1.1);
+        }
+
+        .eye:hover img {
+          transform: scale(1.0);
+        }
+        .brain {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .brain img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .brain:hover {
+          transform: scale(1.1);
+        }
+
+        .brain:hover img {
+          transform: scale(1.1);
+        }
+
+        .hand {
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .hand img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .hand:hover {
+          transform: scale(1.1);
+        }
+
+        .hand:hover img {
+          transform: scale(1.1);
+        }
+
+        .square {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .square img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .square:hover {
+          transform: scale(1.1);
+        }
+
+        .square:hover img {
+          transform: scale(1.1);
+        }
+
+        #prev-tab {
+position: fixed;
+top: 5px;
+left: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+}
+
+#home-tab {
+position: fixed;
+top: 5px;
+left: 45%;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+}
+#next-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+}
+
+        #content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+    </style>
+</head>
+<body>
+
+ <div id="prev-tab">
+        <a href="workbook_2.html">
+          <L>&lt; week 2</L>
+        </a>
+      </div>
+<div id="home-tab">
+  <a href="home.html">
+     <L>go home</L>
+   </a>
+</div>
+
+<div id="next-tab">
+  <a href="workbook_4.html">
+    <L>week 4 &gt;</L>
+  </a>
+</div>
+  <div class="middle">
+  <br>
+  
+  <div class="content-wrapper">
+    <div class="square draggable" style="top: 10%; left:70%;">
+        <img src="./img/fish 1.png" alt="fish 1">
+    </div>
+
+    <div class="square draggable" style="top: 25%; left: 10%;">
+        <img src="./img/fish 2.png" alt="fish 2">
+    </div>
+
+    <div class="square draggable" style="top: 75%; left: 75%;">
+        <img src="./img/fish 3.png" alt="fish 3">
+    </div>
+
+    <div class="square draggable" style="top: 8%; left: 30%;">
+      <img src="./img/fish 4.png" alt="fish 4">
+    </div>
+
+
+    <div class="eye" style="top: 35%; left: 10%;">
+        <a href="wb3_class.html">
+        <img src="./img/people 1.png" alt="person 1">
+        </a>
+      </div>
+
+    <div class="eye" style="top: 35%; left: 40%;">
+        <a href="wb3_home.html">
+        <img src="./img/people 2.png" alt="person 2">
+        </a>
+      </div>
+</div>
+</div>
+
+    <!-- from Matilda's Workbook-->
+     
+    <script>
+
+        function dragElement(elmnt) {
+            var pos1 = 0, 
+            pos2 = 0, 
+            pos3 = 0, 
+            pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+      
+      var draggableElements = document.getElementsByClassName("draggable");
+        for (var i = 0; i < draggableElements.length; i++) {
+            dragElement(draggableElements[i]);
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
