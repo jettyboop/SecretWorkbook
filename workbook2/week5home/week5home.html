@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="week5opening.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 4</title>
+
+<style>
+* {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+/*https://www.w3schools.com/css/css_tooltip.asp*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 5px 5px;
+  position:absolute;
+  border-radius: 6px;
+  z-index: 3;
+  font-size: 25px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+   body{
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Inter Tight'
+}
+
+p {
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, div, span, p1, h {
+  color: rgb(0, 0, 0); 
+  background-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.hover-link:hover {
+  text-decoration: underline;
+}
+
+        .peep {
+            border-radius: 50%;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .peep img {
+          width: 500px;
+          height: auto;
+          transition: transform 0.3s ease;
+        }
+
+        .peep:hover {
+          transform: scale(1.1);
+        }
+
+        .peep:hover img {
+          transform: scale(1.1);
+        }
+
+        #content-wrapper {
+          padding: 10px;
+          width: 100%;
+        }
+        #content-wrapper > * {
+          min-height: 100vh;
+        }
+
+
+        .middle {
+    text-align: center;
+}
+
+.imagecenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+        
+  #prev-tab {
+position: fixed;
+top: 5px;
+left: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgba(0, 0, 0, 0);
+}
+
+#home-tab {
+position: fixed;
+top: 5px;
+left: 45%;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgba(0, 0, 0, 0);
+}
+#next-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgba(0, 0, 0, 0);
+}
+    </style>
+</head>
+<body>
+
+
+
+<div id="next-tab">
+  <a href="../week6home/week6home.html">
+    <h>week 6 &gt;</h>
+  </a>
+</div>
+<div id="home-tab">
+  <a href="../wb2home.html">
+    <h>go home</h>
+</a>
+</div>
+<div id="prev-tab">
+  <a href="../week4home/week4.html">
+    <h>&lt;week 4</h>
+  </a>
+</div>
+
+<div class="middle">  
+ 
+
+  <br>
+  <br>
+  <br>
+
+  <div class="middle" style="margin-top: 40vh;">
+    <div style="display: flex; justify-content: center; gap: 40px;">
+  <a href="../week5/wk5_class.html"><span class="hover-link"><p>Classwork </p></span></a>
+  <br>
+  <a href="../week5/wk5_home.html"><span class="hover-link"><p>Homework </p></span></a>
+  </div>
+  </div>
+  <br>
+
+</div>
+    
+</body>
+</html>

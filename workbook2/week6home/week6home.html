@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.speech.js"></script>
+  <script language="javascript" type="text/javascript" src="subtitle.js"></script>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 6</title>
+
+<style>
+ 
+ /*https://www.w3schools.com/css/css_tooltip.asp*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 255);
+  text-align: center;
+  padding: 5px 5px;
+  position:absolute;
+  border-radius: 6px;
+  z-index: 99;
+  font-size: 10px;
+
+  top: 57%;                          
+  left: 50%;                         
+  transform: translate(-50%, -50%); 
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+   body{
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Inter Tight'
+}
+
+
+ * {
+margin: 0;
+padding: 0px;
+box-sizing: border-box;
+}
+   body{
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Inter Tight'
+}
+
+p {
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, div, span, p1, h {
+  color: rgb(0, 0, 0); 
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+
+.teeth-upper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;    
+  height: auto;       
+}
+
+.teeth-upper img {
+  width: 100vw;
+  height: auto;
+  display: block;
+}
+
+.teeth-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;    
+  height: auto;       
+}
+
+.teeth-bottom img {
+  width: 100vw;
+  height: auto;
+  display: block;
+}
+
+.hover-link:hover {
+  text-decoration: underline;
+}
+
+        .peep {
+        
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .peep img {
+       
+          transition: transform 0.3s ease;
+        }
+
+        .peep:hover {
+          transform: scale(1.1);
+        }
+
+        .peep:hover img {
+          transform: scale(1.1);
+        }
+
+        #content-wrapper {
+          padding: 10px;
+          width: 100%;
+        }
+        #content-wrapper > * {
+          min-height: 100vh;
+        }
+
+
+        .middle {
+    text-align: center;
+}
+
+.imagecenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.square {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .square img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .square:hover {
+          transform: scale(1.1);
+        }
+
+        .square:hover img {
+          transform: scale(1.1);
+        }
+
+        #prev-tab {
+position: fixed;
+top: 5px;
+left: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgba(0, 0, 0, 0);
+padding: 4px 4px;
+}
+
+#home-tab {
+position: fixed;
+top: 5px;
+left: 45%;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgba(0, 0, 0, 0);
+padding: 4px 4px;
+}
+#next-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgba(0, 0, 0, 0);
+padding: 4px 4px;
+}
+    </style>
+</head>
+<body>
+
+<div class="tooltip teeth-bottom peep">
+    <a href="wk6_home.html">
+        <span class="tooltiptext">HOMEWORK</span>
+        <img src="../imgs/bottomteeth.png">
+    </a>
+    </div>
+ 
+<div class="tooltip teeth-upper peep">
+    <span class="tooltiptext">CLASSWORK</span>
+    <a href="wk6_class.html">
+        <img src="../imgs/upperteeth.png">
+    </a>
+</div>
+
+
+<div id="home-tab">
+    <a href="../wb2home.html">
+       <h>go home</h>
+     </a>
+  </div>
+  
+  <div id="prev-tab">
+      <a href="../week5home/week5home.html">
+        <h>&lt;week 5</h>
+      </a>
+    </div>
+
+<div class="middle">  
+    <div style=" position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 10; font-size: 1rem;">
+    (Resize your window and say something!)
+  </div>
+
+</div>
+    
+</body>
+</html>
