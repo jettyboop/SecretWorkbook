@@ -1,7 +1,5 @@
 function setup() {
-  let cnv = createCanvas(400, 400);
-  cnv.parent("canvas-container4");
-  //asked chatgpt how to attach a canvas to html
+  createCanvas(windowWidth, windowHeight);
     frameRate
     background(220);
   }
