@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="./background/background.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Home page</title>
+
+<style>
+   * {
+margin: 0;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body {
+height: 100vh;
+width: 100vw;
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight';
+overflow: hidden;
+color: rgb(255, 255, 255);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, div, span, p1, h {
+  color: rgb(0, 0, 0); 
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+h1{
+  font-size: 6rem;
+  line-height: 6.5rem;
+}
+p {
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 3rem;
+line-height: 3rem;
+}
+h {
+font-size: 1.5rem;
+line-height: 2rem;
+}
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.eye,
+.brain,
+.hand,
+.square {
+    position: absolute;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    }
+
+        
+
+        #content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  width: 600px;
+  height: 800px;
+  perspective: 1000px;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.front {
+      background-image: url('./images/table.png'); 
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+.back {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+
+    </style>
+</head>
+<body>
+
+
+  <div class="container">
+  <div class="card">
+    <div class="front"></div>
+    <div class="back">
+      <div class="middle">  
+      <h> how the tables have turned </h>
+  <br>
+  <br>
+  <a href="./week 7/week7home.html"><p1>1. Arduino Introduction </p1><h> (WEEK 7)</h></a>
+  <br>
+  <a href="./week 8/week8home.html"><p1>2. Arduino Getting to Know</p1><h> (WEEK 8)</h>
+  <br>
+ <a href="./week 9/week9home.html"><p1>3. Arduino Close Friends</p1><h> (WEEK 9)</h> </a>
+ <br>
+  <a href="./experiments/fly_mouse/fly_mouse/ideas.html"> <p1>4. Experiments and Ideas</p1> <h> </h></a>
+  <br>
+  <a href="../opening_page.html"> <p1>5. Get me out of here </p1><h> (BYE !) </h>
+  </a>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
