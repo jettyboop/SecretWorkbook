@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../week4/libraries/p5.min.js"></script>
+    <script src="../week4/libraries/p5.sound.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 8 Inspos</title>
+
+<style>
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+body {
+height: 100vh;
+width: 100vw;
+/* set baseline grid */
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+}
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.header {
+height: 15vh;
+background-color: #FF0000;
+color: rgb(255, 255, 255);
+}
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+/* height: 100%; */
+}
+.inspo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.inspo-text p {
+  max-width: 800px;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+}
+
+#content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+
+    </style>
+</head>
+
+
+
+<body>
+<div id="nav-tab">
+    <a href="./week9home.html">
+       <h> &lt; back</h>
+     </a>
+</div>
+ 
+<p1>WEEK 9</p1><h>(inspos)</h>
+<br>
+<br>
+<div class="wrapper">
+    <div class="inspo-text">
+      <iframe src="https://pointerpointer.com/" frameborder="0" width="800" height="600"></iframe>
+      <p>Pointer Pointer - A website that finds a photo of people that points to exactly where your cursor is. This enabled me to think more freely about my design choices, allowing me to be more playful without needing any deep reasonings.</p>
+    </div>
+  
+    <div class="inspo-text">
+      <iframe src="https://plantwave.com/en-au/products/plantwave?srsltid=AfmBOor6piVx8WS-P8_eYVJRGP7KX13N3HfBH_PMZBQP35SD8PMJpj9k" frameborder="0" width="800" height="600"></iframe>
+      <p>Plant Wave - A device that translates a plant's electrical signals into music. This reminded me of the music machine we made that was attached to a potato.  </p>
+   
+  </div>
+    </div>
+</body>
+</html>

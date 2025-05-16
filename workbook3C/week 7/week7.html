@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../week4/libraries/p5.min.js"></script>
+    <script src="../week4/libraries/p5.sound.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 7 Classwork</title>
+
+<style>
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+body {
+height: 100vh;
+width: 100vw;
+/* set baseline grid */
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+}
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.header {
+height: 15vh;
+background-color: #FF0000;
+color: rgb(255, 255, 255);
+}
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+/* height: 100%; */
+}
+
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+}
+
+#content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+
+    </style>
+</head>
+
+
+
+<body>
+<div id="nav-tab">
+    <a href="./week7home.html">
+       <h> &lt; back</h>
+     </a>
+</div>
+ 
+<p1>WEEK 7</p1><h>(classwork)</h>
+<br>
+<br>
+<div class="middle">
+    <h>ACTIVITIES:</h>
+    <br>
+    </div>
+    <div class="middle"
+<div class="wrapper">
+    <p1>This week, we were introduced to Arduino. Me and Sienna tried naming all the physical computing parts (with a few sneaky peeks at other groups' guesses). </p1>
+   </div>
+</div>
+<br>
+<div style="display: flex; justify-content: center;">
+    <img src="../images/all.jpg"` width="1000" height="auto" >
+</div>
+</div>
+<br>
+<div class="left"><h>1. LED Button</h> </div>
+<div class="wrapper">
+  <img src="../images/ledbutton.gif" width="600" height="auto" >
+  <p1>LED Light lights up when the button is clicked. <br> Component List:
+<br>
+- 1x Arduino <br>
+- 1x BreadBoard <br>
+- 2x Wire <br>
+- 1x Push button <br>
+- 1x Led <br>
+- 1x Resistor <br> 
+  </p1>
+</div>
+</div>
+
+</div>
+<br>
+<div class="right"><h>2. Ultrasonic Buzzer</h></div>
+
+    <div class="wrapper">
+      <p1>The piezo makes a high pitched annoying sound when the potentiometer is adjusted.<br> Component List: <br>
+      - 1x Arduino <br>
+      - 1x BreadBoard <br>
+      - 4x Wire <br>
+      - 1x Potentiometer <br>
+      - 1x Piezo <br>
+     </p1>
+    <video height="600" controls>
+        <source src="../images/ultrabuzz.mp4" type="video/mp4">
+      </video>   
+
+
+</body>
+</html>

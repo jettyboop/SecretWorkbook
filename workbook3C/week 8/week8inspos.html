@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../week4/libraries/p5.min.js"></script>
+    <script src="../week4/libraries/p5.sound.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 8 Inspos</title>
+
+<style>
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+body {
+height: 100vh;
+width: 100vw;
+/* set baseline grid */
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+}
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.header {
+height: 15vh;
+background-color: #FF0000;
+color: rgb(255, 255, 255);
+}
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+/* height: 100%; */
+}
+.inspo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.inspo-text p {
+  max-width: 800px;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+}
+
+#content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+
+    </style>
+</head>
+
+
+
+<body>
+<div id="nav-tab">
+    <a href="./week8home.html">
+       <h> &lt; back</h>
+     </a>
+</div>
+ 
+<p1>WEEK 8</p1><h>(inspos)</h>
+<br>
+<br>
+<div class="wrapper">
+    <div class="inspo-text">
+      <iframe src="https://www.tofugu.com/japan/chindogu-japanese-inventions/" frameborder="0" width="800" height="600"></iframe>
+      <p>Chindogu - Useless inventons that technically works. This concept shaped how I looked at interaction and playfulness in design. </p> </div>
+  
+    <div class="inspo-text">
+      <iframe src="http://www.davidrokeby.com/vns.html" frameborder="0" width="800" height="600"></iframe>
+      <p>Very Nervous System - Translates body movements into sound. Another artwork that translates simple montion into a meaninhful artpiece.</p>
+    </div>
+      <div class="inspo-text">
+      <iframe src="https://trex-runner.com/" frameborder="0" width="800" height="600"></iframe>
+      <p>The Offline Trex Game - The game that pops up when a user is offline. I've always thought it's a clever solution, turning frustration and boredom into play. It inspires me to think outside the box and look for simple unexpected opportunities in problems. </div>
+    </div>
+    </div>
+</body>
+</html>

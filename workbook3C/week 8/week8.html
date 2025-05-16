@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../week4/libraries/p5.min.js"></script>
+    <script src="../week4/libraries/p5.sound.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>Week 7 Classwork</title>
+
+<style>
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+body {
+height: 100vh;
+width: 100vw;
+/* set baseline grid */
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+}
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.header {
+height: 15vh;
+background-color: #FF0000;
+color: rgb(255, 255, 255);
+}
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+/* height: 100%; */
+}
+
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+}
+
+#content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+
+    </style>
+</head>
+
+
+
+<body>
+
+<div id="nav-tab">
+    <a href="./week8home.html">
+        <h> &lt; back</h>
+     </a>
+</div>
+ 
+<p1>WEEK 8</p1><h>(classwork)</h>
+<br>
+<br>
+<div class="middle">
+    <h>ACTIVITIES:</h>
+    <br>
+<div class="wrapper">
+    <p1>This week me and Archisha made a few amazing circuits. </p1>
+   </div>
+</div>
+<br>
+<br>
+
+<div class="Left"><h>1. Fish Playground</h>
+    <div class="wrapper">    <br>
+    <p1>The micro servo spins when the sensor is covered.</p1> 
+
+    <img src="../images/fishplayground.gif" width="800" height="auto" > 
+
+</div>
+<div class="wrapper"> 
+    <img src="../images/fishplayground2.gif" width="800" height="auto" >
+<p1>experiment: spins only a little bit when a flashlight is directed to the sensor, but fully when the sensor is covered.</p1>
+
+</div>
+<div class="wrapper">
+
+  <p1>Component List:
+<br>
+- 1x Arduino <br>
+- 1x Breadboard<br>
+- 8x Wire<br>
+- 1x Resistor<br>
+- 1x Photoresistor<br>
+- 1x Micro Servo<br>
+  </p1>
+  <img src="../images/fish.jpeg" width="800" height="500" >
+</div>
+</div>
+</div>
+  </div>
+</div>
+</div>
+</div>
+<br>
+<div class="right"><h>2. Ultrasonic Music Machine</h> </div>
+
+<div class="wrapper">
+      <p1> The volume increases and decreases based on how far an object is to the ultrasonic distance sensor.</p1>
+      <video height="600" controls>
+        <source src="../images/ultrasonicmusicmachine.mov" type="video/mp4">
+      </video>  
+    </div>
+<div class="wrapper">     
+    
+  <img src="../images/ultradistance.jpeg" width="800" height="500" > 
+      <p1>Component List:
+    <br>
+    - 1x Arduino<br>
+    - 1x Breadboard <br>
+    - 8x Wire<br> 
+    - 1x Ultrasonic Distance Sensor<br>
+    - 1x Piezo<br>
+    </div>
+    <br>
+    <div class="left"><h>3. Captive Touch Music Machine </h> </div>
+    <div class="wrapper">
+        <video height="600" controls>
+            <source src="../images/captivetouch.mov" type="video/mp4">
+          </video>  
+<p1>The piezo plays different tones by touching the edges of the wires like an instrument, one is connected to a potato. </p1>
+ 
+  </div>
+  <div class="wrapper">
+      <p1>Component List:
+    <br>
+    - 1x Arduino </br>
+- 1x Breadboard</br>
+- 10x Wire</br>
+- 3x Resistor</br>
+- 1x Piezo</br>
+- 1x Potato</br>
+</p1>
+
+<img src="../images/potato.jpeg" width="800" height="500" > 
+ 
+</body>
+</html>

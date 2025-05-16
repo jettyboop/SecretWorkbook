@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="./background/background.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+      <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="makeitrain.js"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+    <title>week 7 home</title>
+
+<style>
+   * {
+margin: 0;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body {
+height: 100vh;
+width: 100vw;
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, div, span, p1, h {
+  color: rgb(0, 0, 0); 
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+h1{
+  font-size: 6rem;
+  line-height: 6.5rem;
+}
+p {
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 9rem;
+line-height: 9rem;
+}
+h {
+font-size: 1.5rem;
+line-height: 2rem;
+}
+
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.eye,
+.brain,
+.hand,
+.square {
+    position: absolute;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    }
+
+    .peep {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: grab; 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .peep img {
+          width: 80%;
+          height: 80%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .peep:hover {
+          transform: scale(1.);
+        }
+
+        .peep:hover img {
+          transform: scale(1.1);
+        }
+
+        .tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 5px 5px;
+  position:absolute;
+  border-radius: 6px;
+  z-index: 3;
+  font-size: 25px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+        
+
+        #content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+.background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: auto;
+  z-index: -1; 
+}
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgba(0, 0, 0, 0);
+}
+
+
+    </style>
+</head>
+<body>
+
+<img src="../images/basket.jpeg" class="background" alt="Basket background">
+    <div id="nav-tab">
+        <a href="../home.html">
+           <h> &lt; back</h>
+         </a>
+    </div>
+  <div class="middle">  
+    <br>
+    <h>week 8</h>
+    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>  <div class="content-wrapper">
+    <div class="peep tooltip" style="top: 10%; left: 20%;">
+        <a href="week8.html">
+          <img src="../images/bacon.png">
+        </a>
+        <span class="tooltiptext">[activities]</span>
+      </div>
+   
+      <div class="peep tooltip" style="top: 30%; left: 40%;">
+        <a href="week8inspos.html">
+          <img src="../images/egg.png">
+        </a>
+        <span class="tooltiptext">[inspos]</span>
+      </div>
+  </div>
+
+</div>
+</div>
