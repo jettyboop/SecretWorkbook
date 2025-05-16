@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../week4/libraries/p5.min.js"></script>
+    <script src="../week4/libraries/p5.sound.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <title>doomscroller</title>
+
+<style>
+   * {
+margin: 0;
+padding: 4px;
+box-sizing: border-box;
+}
+body {
+height: 100vh;
+width: 100vw;
+/* set baseline grid */
+font-size: 12px;
+line-height: 18px;
+font-family: 'Inter Tight'
+}
+p {
+/* rem and em is based on the baseline we set in the body tag */
+font-size: 1rem;
+line-height: 1.2rem;
+}
+p1 {
+font-size: 5rem;
+line-height: 4rem;
+}
+h {
+font-size: 2rem;
+line-height: 1.2rem;
+}
+img{
+    mix-blend-mode: multiply;
+}
+.middle {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.header {
+height: 15vh;
+background-color: #FF0000;
+color: rgb(255, 255, 255);
+}
+.wrapper {
+display: flex;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+/* height: 100%; */
+}
+
+body {
+  background-color: white;
+}
+
+#nav-tab {
+position: fixed;
+top: 5px;
+right: 10px;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+height: 40px;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+}
+
+#content-wrapper {
+    padding: 10px;
+    width: 100%;
+}
+#content-wrapper > * {
+    min-height: 100vh;
+}
+
+    </style>
+</head>
+
+
+
+<body>
+<div id="nav-tab">
+    <a href="./ideas.html">
+       <h> &lt; back</h>
+     </a>
+</div>
+ 
+<p1>IDEA 1</p1><h>(The Doomscroller)</h>
+<br>
+    <div class="middle"
+<div class="wrapper">
+    <p1>A device that helps you scroll on reels better, to rot your brain even more. </p1>
+   </div>
+</div>
+<br>
+<div style="display: flex; justify-content: center;">
+    <img src="../../../images/doomscroller.png"` width="1000" height="auto" >
+</div>
+  
+  <p1>A tripod holds up up the phone with a micro servo attached to the side. The button is pressed and the micro servo acts as a thumb to scroll up the reels. An LED light turns on to indicate that the button is on. </p1>
+<br>
+
+
+
+</body>
+</html>
